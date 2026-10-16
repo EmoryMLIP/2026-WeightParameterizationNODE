@@ -1,0 +1,14 @@
+{
+  "sweepId": "2026-10-02-paper",
+  "slug": "paper",
+  "note": "All discretize-then-optimize runs of the manuscript, seeds 20:29 (runPaperSweep.m).",
+  "commit": "259ce29",
+  "dirty": false,
+  "started": "2026-10-02 19:50:23",
+  "matlabVersion": "2022a",
+  "host": "euler",
+  "status": "complete",
+  "nOK": 3860,
+  "nFail": 0,
+  "finished": "2026-10-05 06:17:11"
+}

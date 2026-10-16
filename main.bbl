@@ -1,0 +1,582 @@
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{35}
+% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1}\fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1}\fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1}\fi
+\ifx \bissue  \undefined \def \bissue#1{#1}\fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
+\ifx \blpage  \undefined \def \blpage #1{#1}\fi
+\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
+\ifx \doiurl  \undefined \def \doiurl#1{\url{https://doi.org/#1}}\fi
+\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
+\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
+\ifx \beditor  \undefined \def \beditor#1{#1}\fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
+\ifx \bedition  \undefined \def \bedition#1{#1}\fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
+\ifx \blocation  \undefined \def \blocation#1{#1}\fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
+\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
+\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
+\ifx \barticle \undefined \def \barticle#1{#1}\fi
+\bibcommenthead
+\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
+\ifx \botherref \undefined \def \botherref #1{#1}\fi
+\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
+\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
+\ifx \bbook \undefined \def \bbook#1{#1}\fi
+\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
+\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
+\ifx \endbibitem  \undefined \def \endbibitem {}\fi
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
+\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
+\csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem[\protect\citeauthoryear{Benner et~al.}{2015}]{benner2015survey}
+\begin{barticle}
+\bauthor{\bsnm{Benner}, \binits{P.}},
+\bauthor{\bsnm{Gugercin}, \binits{S.}},
+\bauthor{\bsnm{Willcox}, \binits{K.}}:
+\batitle{A survey of projection-based model reduction methods for parametric
+  dynamical systems}.
+\bjtitle{SIAM Review}
+\bvolume{57}(\bissue{4}),
+\bfpage{483}--\blpage{531}
+(\byear{2015})
+\doiurl{10.1137/130932715}
+\end{barticle}
+\endbibitem
+
+%%% 2
+\bibitem[\protect\citeauthoryear{O'Leary-Roseberry
+  et~al.}{2022}]{olearyroseberry2022dipnets}
+\begin{barticle}
+\bauthor{\bsnm{O'Leary-Roseberry}, \binits{T.}},
+\bauthor{\bsnm{Villa}, \binits{U.}},
+\bauthor{\bsnm{Chen}, \binits{P.}},
+\bauthor{\bsnm{Ghattas}, \binits{O.}}:
+\batitle{{Derivative-informed projected neural networks for high-dimensional
+  parametric maps governed by PDEs}}.
+\bjtitle{Computer Methods in Applied Mechanics and Engineering}
+\bvolume{388},
+\bfpage{114199}
+(\byear{2022})
+\doiurl{10.1016/j.cma.2021.114199}
+\end{barticle}
+\endbibitem
+
+%%% 3
+\bibitem[\protect\citeauthoryear{Iglesias et~al.}{2013}]{IglesiasLawStuart2013}
+\begin{barticle}
+\bauthor{\bsnm{Iglesias}, \binits{M.A.}},
+\bauthor{\bsnm{Law}, \binits{K.J.H.}},
+\bauthor{\bsnm{Stuart}, \binits{A.M.}}:
+\batitle{Ensemble {K}alman methods for inverse problems}.
+\bjtitle{Inverse Problems}
+\bvolume{29}(\bissue{4}),
+\bfpage{045001}
+(\byear{2013})
+\doiurl{10.1088/0266-5611/29/4/045001}
+\end{barticle}
+\endbibitem
+
+%%% 4
+\bibitem[\protect\citeauthoryear{Chen et~al.}{2018}]{ChenEtAl2018}
+\begin{botherref}
+\oauthor{\bsnm{Chen}, \binits{R.T.Q.}},
+\oauthor{\bsnm{Rubanova}, \binits{Y.}},
+\oauthor{\bsnm{Bettencourt}, \binits{J.}},
+\oauthor{\bsnm{Duvenaud}, \binits{D.}}:
+Neural Ordinary Differential Equations.
+arXiv
+(2018).
+\doiurl{10.48550/ARXIV.1806.07366} .
+\url{https://arxiv.org/abs/1806.07366}
+\end{botherref}
+\endbibitem
+
+%%% 5
+\bibitem[\protect\citeauthoryear{E}{2017}]{E:2017kz}
+\begin{barticle}
+\bauthor{\bsnm{E}, \binits{W.}}:
+\batitle{{A Proposal on Machine Learning via Dynamical Systems}}.
+\bjtitle{Communications in Mathematics and Statistics}
+\bvolume{5}(\bissue{1}),
+\bfpage{1}--\blpage{11}
+(\byear{2017})
+\doiurl{10.1007/s40304-017-0103-z}
+\end{barticle}
+\endbibitem
+
+%%% 6
+\bibitem[\protect\citeauthoryear{Haber and Ruthotto}{2017}]{HaberRuthotto2017}
+\begin{barticle}
+\bauthor{\bsnm{Haber}, \binits{E.}},
+\bauthor{\bsnm{Ruthotto}, \binits{L.}}:
+\batitle{{Stable architectures for deep neural networks}}.
+\bjtitle{Inverse Problems}
+\bvolume{34}(\bissue{1}),
+\bfpage{014004}
+(\byear{2017})
+\doiurl{10.1088/1361-6420/aa9a90}
+{\href{https://arxiv.org/abs/1705.03341}{{1705.03341}}}
+\end{barticle}
+\endbibitem
+
+%%% 7
+\bibitem[\protect\citeauthoryear{Ruthotto}{2024}]{ruthotto2024differential}
+\begin{botherref}
+\oauthor{\bsnm{Ruthotto}, \binits{L.}}:
+Differential Equations for Continuous-Time Deep Learning
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 8
+\bibitem[\protect\citeauthoryear{Zhong et~al.}{2019}]{zhong2019symplectic}
+\begin{botherref}
+\oauthor{\bsnm{Zhong}, \binits{Y.D.}},
+\oauthor{\bsnm{Dey}, \binits{B.}},
+\oauthor{\bsnm{Chakraborty}, \binits{A.}}:
+{Symplectic ODE-Net: Learning Hamiltonian dynamics with control}.
+arXiv preprint arXiv:1909.12077
+(2019)
+\end{botherref}
+\endbibitem
+
+%%% 9
+\bibitem[\protect\citeauthoryear{Onken and Ruthotto}{2020}]{discoptvsoptdisc}
+\begin{botherref}
+\oauthor{\bsnm{Onken}, \binits{D.}},
+\oauthor{\bsnm{Ruthotto}, \binits{L.}}:
+Discretize-optimize vs. optimize-discretize for time-series regression and
+  continuous normalizing flows.
+CoRR
+\textbf{abs/2005.13420}
+(2020)
+{\href{https://arxiv.org/abs/2005.13420}{{2005.13420}}}
+\end{botherref}
+\endbibitem
+
+%%% 10
+\bibitem[\protect\citeauthoryear{G{\"{u}}nther et~al.}{2021}]{gunther}
+\begin{botherref}
+\oauthor{\bsnm{G{\"{u}}nther}, \binits{S.}},
+\oauthor{\bsnm{Pazner}, \binits{W.}},
+\oauthor{\bsnm{Qi}, \binits{D.}}:
+Spline parameterization of neural network controls for deep learning.
+arXiv preprint arXiv:2103.00301
+\textbf{abs/2103.00301}
+(2021)
+{\href{https://arxiv.org/abs/2103.00301}{{2103.00301}}}
+\end{botherref}
+\endbibitem
+
+%%% 11
+\bibitem[\protect\citeauthoryear{Nair et~al.}{2025}]{nair2024investigation}
+\begin{botherref}
+\oauthor{\bsnm{Nair}, \binits{A.S.}},
+\oauthor{\bsnm{Barwey}, \binits{S.}},
+\oauthor{\bsnm{Pal}, \binits{P.}},
+\oauthor{\bsnm{MacArt}, \binits{J.F.}},
+\oauthor{\bsnm{Arcomano}, \binits{T.}},
+\oauthor{\bsnm{Maulik}, \binits{R.}}:
+Understanding Latent Timescales in Neural Ordinary Differential Equation Models
+  for Advection-Dominated Dynamical Systems
+(2025).
+\url{https://arxiv.org/abs/2403.02224}
+\end{botherref}
+\endbibitem
+
+%%% 12
+\bibitem[\protect\citeauthoryear{Vermariën et~al.}{2025}]{Vermari_n_2025}
+\begin{barticle}
+\bauthor{\bsnm{Vermariën}, \binits{G.}},
+\bauthor{\bsnm{Bisbas}, \binits{T.G.}},
+\bauthor{\bsnm{Viti}, \binits{S.}},
+\bauthor{\bsnm{Zhao}, \binits{Y.}},
+\bauthor{\bsnm{Tang}, \binits{X.}},
+\bauthor{\bsnm{Ravichandran}, \binits{R.}}:
+\batitle{{NeuralPDR: Neural differential equations as surrogate models for
+  photodissociation regions}}.
+\bjtitle{Machine Learning: Science and Technology}
+\bvolume{6}(\bissue{2}),
+\bfpage{025069}
+(\byear{2025})
+\doiurl{10.1088/2632-2153/ade4ee}
+\end{barticle}
+\endbibitem
+
+%%% 13
+\bibitem[\protect\citeauthoryear{Zhou and
+  Barati~Farimani}{2025}]{Zhou_2025_neuralPDE}
+\begin{barticle}
+\bauthor{\bsnm{Zhou}, \binits{A.}},
+\bauthor{\bsnm{Barati~Farimani}, \binits{A.}}:
+\batitle{{Predicting change, not states: An alternate framework for neural PDE
+  surrogates}}.
+\bjtitle{Computer Methods in Applied Mechanics and Engineering}
+\bvolume{441},
+\bfpage{117990}
+(\byear{2025})
+\doiurl{10.1016/j.cma.2025.117990}
+\end{barticle}
+\endbibitem
+
+%%% 14
+\bibitem[\protect\citeauthoryear{Peherstorfer and
+  Willcox}{2016}]{peherstorfer2016dataOpInf}
+\begin{barticle}
+\bauthor{\bsnm{Peherstorfer}, \binits{B.}},
+\bauthor{\bsnm{Willcox}, \binits{K.}}:
+\batitle{Data-driven operator inference for nonintrusive projection-based model
+  reduction}.
+\bjtitle{Computer Methods in Applied Mechanics and Engineering}
+\bvolume{306},
+\bfpage{196}--\blpage{215}
+(\byear{2016})
+\end{barticle}
+\endbibitem
+
+%%% 15
+\bibitem[\protect\citeauthoryear{Benner
+  et~al.}{2025}]{benner2025applicationoperatorinferencereducedorder}
+\begin{botherref}
+\oauthor{\bsnm{Benner}, \binits{P.}},
+\oauthor{\bsnm{Filanova}, \binits{Y.}},
+\oauthor{\bsnm{Duff}, \binits{I.P.}},
+\oauthor{\bsnm{Saak}, \binits{J.}}:
+Application of operator inference to reduced-order modeling of constrained
+  mechanical systems
+(2025).
+\url{https://arxiv.org/abs/2507.05472}
+\end{botherref}
+\endbibitem
+
+%%% 16
+\bibitem[\protect\citeauthoryear{Kramer et~al.}{2024}]{kramer2024learning}
+\begin{barticle}
+\bauthor{\bsnm{Kramer}, \binits{B.}},
+\bauthor{\bsnm{Peherstorfer}, \binits{B.}},
+\bauthor{\bsnm{Willcox}, \binits{K.E.}}:
+\batitle{Learning nonlinear reduced models from data with operator inference}.
+\bjtitle{Annual Review of Fluid Mechanics}
+\bvolume{56}(\bissue{1}),
+\bfpage{521}--\blpage{548}
+(\byear{2024})
+\end{barticle}
+\endbibitem
+
+%%% 17
+\bibitem[\protect\citeauthoryear{Lu et~al.}{2021}]{deepOnet}
+\begin{barticle}
+\bauthor{\bsnm{Lu}, \binits{L.}},
+\bauthor{\bsnm{Jin}, \binits{P.}},
+\bauthor{\bsnm{Pang}, \binits{G.}},
+\bauthor{\bsnm{Zhang}, \binits{Z.}},
+\bauthor{\bsnm{Karniadakis}, \binits{G.E.}}:
+\batitle{{Learning nonlinear operators via DeepONet based on the universal
+  approximation theorem of operators}}.
+\bjtitle{Nature Machine Intelligence}
+\bvolume{3}(\bissue{3}),
+\bfpage{218}--\blpage{229}
+(\byear{2021})
+\doiurl{10.1038/s42256-021-00302-5}
+\end{barticle}
+\endbibitem
+
+%%% 18
+\bibitem[\protect\citeauthoryear{Li
+  et~al.}{2020}]{li2020neuraloperatorgraphkernel}
+\begin{botherref}
+\oauthor{\bsnm{Li}, \binits{Z.}},
+\oauthor{\bsnm{Kovachki}, \binits{N.}},
+\oauthor{\bsnm{Azizzadenesheli}, \binits{K.}},
+\oauthor{\bsnm{Liu}, \binits{B.}},
+\oauthor{\bsnm{Bhattacharya}, \binits{K.}},
+\oauthor{\bsnm{Stuart}, \binits{A.}},
+\oauthor{\bsnm{Anandkumar}, \binits{A.}}:
+Neural Operator: Graph Kernel Network for Partial Differential Equations
+(2020).
+\url{https://arxiv.org/abs/2003.03485}
+\end{botherref}
+\endbibitem
+
+%%% 19
+\bibitem[\protect\citeauthoryear{Li
+  et~al.}{2021}]{li2021fourierneuraloperatorparametric}
+\begin{botherref}
+\oauthor{\bsnm{Li}, \binits{Z.}},
+\oauthor{\bsnm{Kovachki}, \binits{N.}},
+\oauthor{\bsnm{Azizzadenesheli}, \binits{K.}},
+\oauthor{\bsnm{Liu}, \binits{B.}},
+\oauthor{\bsnm{Bhattacharya}, \binits{K.}},
+\oauthor{\bsnm{Stuart}, \binits{A.}},
+\oauthor{\bsnm{Anandkumar}, \binits{A.}}:
+Fourier Neural Operator for Parametric Partial Differential Equations
+(2021).
+\url{https://arxiv.org/abs/2010.08895}
+\end{botherref}
+\endbibitem
+
+%%% 20
+\bibitem[\protect\citeauthoryear{Ott et~al.}{2021}]{ott2021resnet}
+\begin{botherref}
+\oauthor{\bsnm{Ott}, \binits{K.}},
+\oauthor{\bsnm{Katiyar}, \binits{P.}},
+\oauthor{\bsnm{Hennig}, \binits{P.}},
+\oauthor{\bsnm{Tiemann}, \binits{M.}}:
+{ResNet} after all? {Neural} {ODEs} and their numerical solution.
+International Conference on Learning Representations (ICLR)
+(2021)
+{\href{https://arxiv.org/abs/2007.15386}{{2007.15386}}}
+\end{botherref}
+\endbibitem
+
+%%% 21
+\bibitem[\protect\citeauthoryear{Yu et~al.}{2022}]{generalized}
+\begin{botherref}
+\oauthor{\bsnm{Yu}, \binits{D.}},
+\oauthor{\bsnm{Miao}, \binits{H.}},
+\oauthor{\bsnm{Wu}, \binits{H.}}:
+Neural Generalized Ordinary Differential Equations with Layer-varying
+  Parameters
+(2022).
+\url{https://arxiv.org/abs/2209.10633}
+\end{botherref}
+\endbibitem
+
+%%% 22
+\bibitem[\protect\citeauthoryear{Davis et~al.}{2020}]{autonomous}
+\begin{botherref}
+\oauthor{\bsnm{Davis}, \binits{J.Q.}},
+\oauthor{\bsnm{Choromanski}, \binits{K.}},
+\oauthor{\bsnm{Varley}, \binits{J.}},
+\oauthor{\bsnm{Lee}, \binits{H.}},
+\oauthor{\bsnm{Slotine}, \binits{J.E.}},
+\oauthor{\bsnm{Likhosterov}, \binits{V.}},
+\oauthor{\bsnm{Weller}, \binits{A.}},
+\oauthor{\bsnm{Makadia}, \binits{A.}},
+\oauthor{\bsnm{Sindhwani}, \binits{V.}}:
+{Time dependence in non-autonomous neural ODEs}.
+CoRR
+\textbf{abs/2005.01906}
+(2020)
+{\href{https://arxiv.org/abs/2005.01906}{{2005.01906}}}
+\end{botherref}
+\endbibitem
+
+%%% 23
+\bibitem[\protect\citeauthoryear{Massaroli et~al.}{2020}]{dissect}
+\begin{botherref}
+\oauthor{\bsnm{Massaroli}, \binits{S.}},
+\oauthor{\bsnm{Poli}, \binits{M.}},
+\oauthor{\bsnm{Park}, \binits{J.}},
+\oauthor{\bsnm{Yamashita}, \binits{A.}},
+\oauthor{\bsnm{Asama}, \binits{H.}}:
+{Dissecting neural ODEs}.
+CoRR
+\textbf{abs/2002.08071}
+(2020)
+{\href{https://arxiv.org/abs/2002.08071}{{2002.08071}}}
+\end{botherref}
+\endbibitem
+
+%%% 24
+\bibitem[\protect\citeauthoryear{Sander et~al.}{2022}]{sander2022residual}
+\begin{botherref}
+\oauthor{\bsnm{Sander}, \binits{M.E.}},
+\oauthor{\bsnm{Ablin}, \binits{P.}},
+\oauthor{\bsnm{Peyré}, \binits{G.}}:
+Do Residual Neural Networks discretize Neural Ordinary Differential Equations?
+(2022).
+\url{https://arxiv.org/abs/2205.14612}
+\end{botherref}
+\endbibitem
+
+%%% 25
+\bibitem[\protect\citeauthoryear{He et~al.}{2015}]{heEtAl}
+\begin{botherref}
+\oauthor{\bsnm{He}, \binits{K.}},
+\oauthor{\bsnm{Zhang}, \binits{X.}},
+\oauthor{\bsnm{Ren}, \binits{S.}},
+\oauthor{\bsnm{Sun}, \binits{J.}}:
+Deep residual learning for image recognition.
+CoRR
+\textbf{abs/1512.03385}
+(2015)
+{\href{https://arxiv.org/abs/1512.03385}{{1512.03385}}}
+\end{botherref}
+\endbibitem
+
+%%% 26
+\bibitem[\protect\citeauthoryear{He et~al.}{2019}]{zhouNODES}
+\begin{bchapter}
+\bauthor{\bsnm{He}, \binits{L.}},
+\bauthor{\bsnm{Xie}, \binits{X.}},
+\bauthor{\bsnm{Lin}, \binits{Z.}}:
+\bctitle{Neural ordinary differential equations with envolutionary weights}.
+In: \bbtitle{Pattern Recognition and Computer Vision: Second Chinese
+  Conference, PRCV 2019, Xi'an, China, November 8-11, 2019, Proceedings, Part
+  I},
+pp. \bfpage{598}--\blpage{610}.
+\bpublisher{Springer},
+\blocation{Berlin, Heidelberg}
+(\byear{2019}).
+\doiurl{10.1007/978-3-030-31654-9\_51} .
+\burl{https://doi.org/10.1007/978-3-030-31654-9\_51}
+\end{bchapter}
+\endbibitem
+
+%%% 27
+\bibitem[\protect\citeauthoryear{Luenberger}{1969}]{Luenberger1969}
+\begin{bbook}
+\bauthor{\bsnm{Luenberger}, \binits{D.G.}}:
+\bbtitle{Optimization by Vector Space Methods}.
+\bpublisher{John Wiley \& Sons},
+\blocation{New York}
+(\byear{1969})
+\end{bbook}
+\endbibitem
+
+%%% 28
+\bibitem[\protect\citeauthoryear{Gholami et~al.}{2019}]{BIROS_ANODE}
+\begin{botherref}
+\oauthor{\bsnm{Gholami}, \binits{A.}},
+\oauthor{\bsnm{Keutzer}, \binits{K.}},
+\oauthor{\bsnm{Biros}, \binits{G.}}:
+{ANODE: Unconditionally accurate memory-efficient gradients for neural ODEs}.
+CoRR
+\textbf{abs/1902.10298}
+(2019)
+{\href{https://arxiv.org/abs/1902.10298}{{1902.10298}}}
+\end{botherref}
+\endbibitem
+
+%%% 29
+\bibitem[\protect\citeauthoryear{Chakraborty
+  et~al.}{2024}]{chakraborty2024improveddeeplearningchaotic}
+\begin{botherref}
+\oauthor{\bsnm{Chakraborty}, \binits{D.}},
+\oauthor{\bsnm{Chung}, \binits{S.W.}},
+\oauthor{\bsnm{Chattopadhyay}, \binits{A.}},
+\oauthor{\bsnm{Maulik}, \binits{R.}}:
+Improved deep learning of chaotic dynamical systems with multistep penalty
+  losses
+(2024).
+\url{https://arxiv.org/abs/2410.05572}
+\end{botherref}
+\endbibitem
+
+%%% 30
+\bibitem[\protect\citeauthoryear{Kingma and Ba}{2014}]{adam}
+\begin{botherref}
+\oauthor{\bsnm{Kingma}, \binits{D.P.}},
+\oauthor{\bsnm{Ba}, \binits{J.}}:
+Adam: A method for stochastic optimization.
+arXiv preprint arXiv:1412.6980
+(2014)
+{\href{https://arxiv.org/abs/1412.6980}{{arXiv:1412.6980}}}
+{[cs.LG]}
+\end{botherref}
+\endbibitem
+
+%%% 31
+\bibitem[\protect\citeauthoryear{Newman et~al.}{2020}]{VarPro}
+\begin{botherref}
+\oauthor{\bsnm{Newman}, \binits{E.}},
+\oauthor{\bsnm{Ruthotto}, \binits{L.}},
+\oauthor{\bsnm{Hart}, \binits{J.L.}},
+\oauthor{\bsnm{Bloemen~Waanders}, \binits{B.G.}}:
+{Train like a (Var)Pro: Efficient training of neural networks with variable
+  projection}.
+CoRR
+\textbf{abs/2007.13171}
+(2020)
+{\href{https://arxiv.org/abs/2007.13171}{{2007.13171}}}
+\end{botherref}
+\endbibitem
+
+%%% 32
+\bibitem[\protect\citeauthoryear{Li et~al.}{2019}]{Li:2019wr}
+\begin{botherref}
+\oauthor{\bsnm{Li}, \binits{Q.}},
+\oauthor{\bsnm{Lin}, \binits{T.}},
+\oauthor{\bsnm{Shen}, \binits{Z.}}:
+Deep learning via dynamical systems: An approximation perspective.
+CoRR
+\textbf{abs/1912.10382}
+(2019)
+{\href{https://arxiv.org/abs/1912.10382}{{1912.10382}}}
+\end{botherref}
+\endbibitem
+
+%%% 33
+\bibitem[\protect\citeauthoryear{Benning et~al.}{2019}]{benning2019deep}
+\begin{barticle}
+\bauthor{\bsnm{Benning}, \binits{M.}},
+\bauthor{\bsnm{Celledoni}, \binits{E.}},
+\bauthor{\bsnm{Ehrhardt}, \binits{M.J.}},
+\bauthor{\bsnm{Owren}, \binits{B.}},
+\bauthor{\bsnm{Sch{\"o}nlieb}, \binits{C.-B.}}:
+\batitle{Deep learning as optimal control problems: Models and numerical
+  methods}.
+\bjtitle{Journal of Computational Dynamics}
+\bvolume{6}(\bissue{2}),
+\bfpage{171}--\blpage{198}
+(\byear{2019})
+\end{barticle}
+\endbibitem
+
+%%% 34
+\bibitem[\protect\citeauthoryear{Yuan et~al.}{2023}]{yuan2023evaluation}
+\begin{barticle}
+\bauthor{\bsnm{Yuan}, \binits{F.}},
+\bauthor{\bsnm{Ricciuto}, \binits{D.M.}},
+\bauthor{\bsnm{Xu}, \binits{X.}},
+\bauthor{\bsnm{Roman}, \binits{D.T.}},
+\bauthor{\bsnm{Lilleskov}, \binits{E.}},
+\bauthor{\bsnm{Wood}, \binits{J.D.}},
+\bauthor{\bsnm{Cadillo-Quiroz}, \binits{H.}},
+\bauthor{\bsnm{Lafuente}, \binits{A.}},
+\bauthor{\bsnm{Rengifo}, \binits{J.}},
+\bauthor{\bsnm{Kolka}, \binits{R.}}, \betal:
+\batitle{{Evaluation and improvement of the E3SM land model for simulating
+  energy and carbon fluxes in an Amazonian peatland}}.
+\bjtitle{Agricultural and Forest Meteorology}
+\bvolume{332},
+\bfpage{109364}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 35
+\bibitem[\protect\citeauthoryear{Takamoto
+  et~al.}{2024}]{takamoto2024pdebenchextensivebenchmarkscientific}
+\begin{botherref}
+\oauthor{\bsnm{Takamoto}, \binits{M.}},
+\oauthor{\bsnm{Praditia}, \binits{T.}},
+\oauthor{\bsnm{Leiteritz}, \binits{R.}},
+\oauthor{\bsnm{MacKinlay}, \binits{D.}},
+\oauthor{\bsnm{Alesiani}, \binits{F.}},
+\oauthor{\bsnm{Pflüger}, \binits{D.}},
+\oauthor{\bsnm{Niepert}, \binits{M.}}:
+PDEBENCH: An Extensive Benchmark for Scientific Machine Learning
+(2024).
+\url{https://arxiv.org/abs/2210.07182}
+\end{botherref}
+\endbibitem
+
+\end{thebibliography}

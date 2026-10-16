@@ -1,0 +1,20 @@
+{
+  "sweepId": "2026-10-04-gnvpro-seeds",
+  "slug": "gnvpro-seeds",
+  "note": "GNvpro seeds 30-59 on the T=1 degree axis (runGnvproSeeds.m).",
+  "commit": "259ce29",
+  "dirty": false,
+  "started": "2026-10-04 18:48:08",
+  "matlabVersion": "2022a",
+  "host": "euler",
+  "status": "complete",
+  "nOK": 2340,
+  "nFail": 0,
+  "finished": "2026-10-04 23:22:00",
+  "topUp": {
+    "topsUp": [
+      "2026-10-02-paper"
+    ],
+    "reason": "Adds GNvpro seeds 30-59 to the T=1 degree-axis cells (Legendre d=0..11 and the unconstrained model, 3 datasets x 2 architectures) of 2026-10-02-paper, which ran seeds 20-29, so each GNvpro cell has forty seeds and each Adam cell ten."
+  }
+}

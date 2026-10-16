@@ -1,0 +1,14 @@
+{
+  "sweepId": "2026-10-04-precision-monomial",
+  "slug": "precision-monomial",
+  "note": "CDR monomial d=10,11 in single and double precision, seeds 20:29 (runPrecisionMonomialSweep.m).",
+  "commit": "259ce29",
+  "dirty": false,
+  "started": "2026-10-04 23:24:14",
+  "matlabVersion": "2022a",
+  "host": "euler",
+  "status": "complete",
+  "nOK": 160,
+  "nFail": 0,
+  "finished": "2026-10-05 05:21:26"
+}

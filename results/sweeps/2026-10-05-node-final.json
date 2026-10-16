@@ -1,0 +1,18 @@
+{
+  "sweepId": "2026-10-05-node-final",
+  "slug": "node-final",
+  "note": "Neural ODE: 3 datasets x 4 arms (none, legendre, monomial, monomial-raw) x 5 seeds, continuous adjoint, settings from dataset_config.py.",
+  "commit": "259ce29",
+  "dirty": false,
+  "started": "2026-10-05 12:12:58",
+  "framework": "python",
+  "pythonVersion": "3.13.7",
+  "torchVersion": "2.8.0",
+  "torchdiffeqVersion": "0.2.5",
+  "host": "euler",
+  "status": "complete",
+  "nExpected": 60,
+  "nOK": 60,
+  "nFail": 0,
+  "finished": "2026-10-06 00:53:35"
+}

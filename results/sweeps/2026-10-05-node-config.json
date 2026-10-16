@@ -1,0 +1,35 @@
+{
+  "sweepId": "2026-10-05-node-config",
+  "slug": "node-config",
+  "note": "Readout warm start and ADAM learning rate selected on validation error: 3 datasets x warm start {0,1} x lr {1e-2,1e-3,1e-4}, seed 0, Legendre d=3.",
+  "commit": "259ce29",
+  "dirty": false,
+  "started": "2026-10-05 06:18:53",
+  "framework": "python",
+  "pythonVersion": "3.13.7",
+  "torchVersion": "2.8.0",
+  "torchdiffeqVersion": "0.2.5",
+  "host": "euler",
+  "status": "complete",
+  "nExpected": 18,
+  "nOK": 18,
+  "nFail": 0,
+  "finished": "2026-10-05 12:12:55",
+  "selected": {
+    "CDR": {
+      "warm_start": 0,
+      "lr": "1e-2",
+      "val": 0.0067
+    },
+    "DCR": {
+      "warm_start": 1,
+      "lr": "1e-3",
+      "val": 0.2543
+    },
+    "ELM": {
+      "warm_start": 0,
+      "lr": "1e-2",
+      "val": 0.139
+    }
+  }
+}

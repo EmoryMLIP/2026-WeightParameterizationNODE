@@ -1,0 +1,30 @@
+% generated 2026-10-06 06:19:46 from commit 259ce29 by Python 3.13.7 on MacBook-Pro
+% source: results/runs_python.csv   sweep: 2026-10-05-node-final
+% regenerate with: make tables
+% metric: aggregate relative error ||Pred-C||_F/||C||_F on the test set
+% cells are mean +/- std over the seeds noted per row, as mantissas against the power of ten named in each block
+% commit: 259ce29   gradient: continuous_adjoint
+% loss: least_squares   alpha: 1e-10
+\begin{tabular}{llccccc}
+\toprule
+Dataset & Parameterization & Params & Train & Val & Test & Test NFE \\
+\midrule
+ELM $(\times 10^{-1})$ & static ($D=0$) & 1965 & $1.65 \pm 0.12$ & $1.79 \pm 0.10$ & $1.67 \pm 0.12$ & $99 \pm 10$ \\  % n=5 seeds
+ & Legendre & 6660 & $1.08 \pm 0.08$ & $1.35 \pm 0.05$ & $1.27 \pm 0.02$ & $391 \pm 24$ \\  % n=5 seeds
+ & monomial & 6660 & $1.14 \pm 0.12$ & $1.43 \pm 0.06$ & $1.28 \pm 0.09$ & $312 \pm 18$ \\  % n=5 seeds
+ & monomial, unscaled & 6660 & $1.43 \pm 0.17$ & $1.62 \pm 0.16$ & $1.53 \pm 0.19$ & $301 \pm 51$ \\  % n=5 seeds
+& \emph{mean predictor} & & & & $5.30$ & \\
+\midrule
+CDR $(\times 10^{-2})$ & static ($D=0$) & 1954 & $0.87 \pm 0.05$ & $0.96 \pm 0.07$ & $1.17 \pm 0.07$ & $88 \pm 7$ \\  % n=5 seeds
+ & Legendre & 4528 & $0.50 \pm 0.07$ & $0.58 \pm 0.07$ & $0.64 \pm 0.08$ & $547 \pm 56$ \\  % n=5 seeds
+ & monomial & 4528 & $0.47 \pm 0.03$ & $0.55 \pm 0.02$ & $0.61 \pm 0.03$ & $402 \pm 16$ \\  % n=5 seeds
+ & monomial, unscaled & 4528 & $0.55 \pm 0.11$ & $0.72 \pm 0.14$ & $0.71 \pm 0.15$ & $260 \pm 40$ \\  % n=5 seeds
+& \emph{mean predictor} & & & & $20.63$ & \\
+\midrule
+DCR $(\times 10^{-1})$ & static ($D=0$) & 16724 & $2.62 \pm 0.14$ & $2.66 \pm 0.14$ & $2.59 \pm 0.13$ & $38 \pm 0$ \\  % n=5 seeds
+ & Legendre & 21722 & $2.53 \pm 0.05$ & $2.57 \pm 0.04$ & $2.49 \pm 0.04$ & $112 \pm 18$ \\  % n=5 seeds
+ & monomial & 21722 & $2.55 \pm 0.06$ & $2.60 \pm 0.05$ & $2.51 \pm 0.06$ & $135 \pm 16$ \\  % n=5 seeds
+ & monomial, unscaled & 21722 & $2.65 \pm 0.15$ & $2.69 \pm 0.16$ & $2.60 \pm 0.13$ & $120 \pm 7$ \\  % n=5 seeds
+& \emph{mean predictor} & & & & $10.00$ & \\
+\bottomrule
+\end{tabular}
