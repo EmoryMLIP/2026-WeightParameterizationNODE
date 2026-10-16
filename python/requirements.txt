@@ -1,0 +1,12 @@
+# Python 3.13.7. Versions below are those the tests and the table and figure
+# generators were run with.
+#
+#   python3.13 -m venv python/.venv && python/.venv/bin/pip install -r python/requirements.txt
+#   python/.venv/bin/python python/test_timeparam.py
+numpy==2.3.2
+scipy==1.16.1
+torch==2.8.0
+torchdiffeq==0.2.5
+tqdm==4.67.1
+matplotlib==3.10.5
+pandas==2.3.2

@@ -1,0 +1,31 @@
+# Trained weights, per-run records and logs; only retraining produces them.
+results/raw/
+
+# 64 MB, hosted on Zenodo and fetched by data/setupDCR.m.
+data/DCR_Data.mat
+
+# LaTeX build output
+*.aux
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*-eps-converted-to.pdf
+main.pdf
+
+# Bibliography and figure PDFs ship with the sources; a global gitignore that
+# excludes *.bib, *.bbl or *.pdf would otherwise drop them.
+!main.bib
+!main.bbl
+!figures/*.pdf
+
+# Python
+**/__pycache__/
+*.pyc
+python/.venv/
+
+# Built by `make arxiv`
+arxiv-submission.tar.gz

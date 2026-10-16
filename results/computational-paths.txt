@@ -1,0 +1,28 @@
+# Paths whose contents can change a number, by pipeline.
+#
+# Two commits that agree on every path relevant to a run produce identical
+# results, so runs stamped with either are one experiment. Anything outside
+# these paths (a sweep driver, a launcher, a README, the manuscript) cannot move
+# a number and does not split a sweep.
+#
+# The split by pipeline is deliberate: a MATLAB run's numbers cannot change
+# because timeparam.py changed, so treating the union as relevant to both would
+# refuse sound combinations of commits.
+#
+# Read by matlab/lib/checkProvenance.m, which takes [matlab] + [shared] or
+# [python] + [shared].
+# Blank lines and lines starting with # are ignored.
+
+[matlab]
+matlab/meganet
+matlab/experiments/runExperiment.m
+matlab/lib/getDatasetConfig.m
+
+[python]
+python/timeparam.py
+python/dataset_config.py
+python/experiment_runtime.py
+python/surrogate/train_surrogate_node.py
+
+[shared]
+data

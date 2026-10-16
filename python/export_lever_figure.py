@@ -1,0 +1,141 @@
+#!/usr/bin/env python3
+r"""Emit figures/degree_lever.tex: test error against polynomial degree.
+
+Reads results/runs.csv and the paper sweep manifest. The degree axis runs from
+D=0 (weights constant in time, the static-weight neural ODE) to D=N-1=11 (the
+design matrix is square and invertible, so the parameterization spans the
+unconstrained ResNet exactly). All points are from the paper sweep, T=1, Adam.
+
+Every seed is drawn, offset left and right by architecture. The gap between the
+two architectures is comparable to a single configuration's seed spread, so two
+clean lines would assert a difference the runs do not support. The curve is the
+geometric mean over seeds, the appropriate centre for a positive quantity on a
+log axis.
+
+The unconstrained model is drawn at the right of each panel rather than as the
+last point of the curve. Legendre at D=11 spans the same function class, and
+their difference is a finding (large on DCR under Adam), so the two are not
+merged.
+
+Usage: python3 export_lever_figure.py
+"""
+import csv
+import json
+import math
+import os
+import sys
+from collections import defaultdict
+from statistics import mean
+
+from sweep_defaults import PAPER_SWEEP, is_default_run
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.abspath(os.path.join(HERE, '..'))
+
+DATASETS = ('ELM', 'CDR', 'DCR')
+# (ledger name, label, colour, x offset, mark). The offset separates the two
+# seed clouds, which overlap almost completely without it.
+ARCHS = (('ResNN', 'ResNet', 'mycolor3', -0.17, '*'),
+         ('hamiltonian', 'Hamiltonian', 'mycolor5', 0.17, 'square*'))
+UNC_X = 12.3   # the unconstrained model, off the end of the degree axis
+
+
+def gmean(v):
+    return math.exp(mean(math.log(x) for x in v))
+
+
+def sweep_commit(s):
+    m = json.load(open(os.path.join(ROOT, 'results', 'sweeps', s + '.json')))
+    if m.get('status') != 'complete':
+        sys.exit(f"sweep {s} has status {m.get('status')!r}; its results are partial")
+    if m.get('dirty'):
+        sys.exit(f"sweep {s} was built from a dirty working tree")
+    return m['commit']
+
+
+def main():
+    commit = sweep_commit(PAPER_SWEEP)
+    rows = [r for r in csv.DictReader(open(os.path.join(ROOT, 'results', 'runs.csv')))
+            if r['sweep'] == PAPER_SWEEP and r['T'] == '1' and r['opti'] == 'sgd'
+            and r['precision'] == 'double' and float(r['alpha1']) == 1e-10
+            and is_default_run(r)]
+    if not rows:
+        sys.exit(f"no rows for {PAPER_SWEEP} in results/runs.csv")
+
+    # (dataset, arch) -> {degree or 'unc': [test error per seed]}
+    data = defaultdict(lambda: defaultdict(list))
+    for r in rows:
+        if r['basis'] == 'Legendre':
+            data[(r['dataset'], r['dynamic'])][int(r['d'])].append(float(r['test_agg']))
+        elif r['basis'] == 'none':
+            data[(r['dataset'], r['dynamic'])]['unc'].append(float(r['test_agg']))
+
+    body, notes = [], []
+    for panel, ds in enumerate(DATASETS):
+        body.append('\\nextgroupplot[title={%s}]' % ds)
+        # The legend belongs to one axis only. Give it to the middle panel and
+        # let the other two forget their curves, or it collects six entries.
+        legend_here = (panel == len(DATASETS) // 2)
+        for arch, _, color, dx, mark in ARCHS:
+            d = data[(ds, arch)]
+            if not d:
+                sys.exit(f"no runs for {ds} {arch}")
+            degrees = sorted(k for k in d if k != 'unc')
+            seeds = ' '.join(f'({k + dx},{v:.6f})' for k in degrees for v in d[k])
+            body.append('\\addplot[only marks,mark=*,mark size=0.5pt,color=%s,'
+                        'opacity=0.45,forget plot] coordinates {%s};' % (color, seeds))
+            line = ' '.join(f'({k + dx},{gmean(d[k]):.6f})' for k in degrees)
+            body.append('\\addplot[color=%s,mark=%s,mark size=1.4pt,thick%s] '
+                        'coordinates {%s};'
+                        % (color, mark, '' if legend_here else ',forget plot', line))
+            if d['unc']:
+                body.append('\\addplot[only marks,mark=*,mark size=0.5pt,color=%s,'
+                            'opacity=0.45,forget plot] coordinates {%s};'
+                            % (color, ' '.join(f'({UNC_X + dx},{v:.6f})' for v in d['unc'])))
+                body.append('\\addplot[color=%s,mark=%s,mark size=2.6pt,only marks,'
+                            'forget plot] coordinates {(%.2f,%.6f)};'
+                            % (color, mark.rstrip('*'), UNC_X + dx, gmean(d['unc'])))
+            notes.append('%%   %s %-11s D=0 %.5f  D=11 %.5f  unconstrained %.5f  (%d seeds)'
+                         % (ds, arch, gmean(d[0]), gmean(d[11]), gmean(d['unc']), len(d[0])))
+        if legend_here:
+            body.append('\\legend{%s}' % ','.join(lab for _, lab, _, _, _ in ARCHS))
+
+    out = os.path.join(ROOT, 'figures', 'degree_lever.tex')
+    with open(out, 'w') as fh:
+        fh.write('%% generated by python/export_lever_figure.py\n')
+        fh.write(f'%% sweep: {PAPER_SWEEP} at commit {commit}\n')
+        fh.write('%% aggregate test relative error, T=1, Adam, Legendre; every seed drawn,\n')
+        fh.write('%% the curve is the geometric mean; unconstrained model at x=%.1f\n' % UNC_X)
+        fh.write('\n'.join(notes) + '\n')
+        fh.write(r"""\documentclass[tikz]{standalone}
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots}
+\pgfplotsset{compat=1.18}
+\definecolor{mycolor3}{rgb}{0.0,0.0,1.0}
+\definecolor{mycolor5}{rgb}{1.0,0.03,0.0}
+\begin{document}
+\begin{tikzpicture}
+\begin{groupplot}[group style={group size=3 by 1,horizontal sep=1.15cm},
+  width=2.35in,height=2.3in,ymode=log,
+  log ticks with fixed point,
+  xlabel={polynomial degree $D$},
+  xtick={0,2,4,6,8,10},extra x ticks={12.3},extra x tick labels={unc.},
+  extra x tick style={tick label style={font=\footnotesize}},
+  xmin=-0.7,xmax=13.0,ymajorgrids,
+  title style={font=\small},tick label style={font=\footnotesize},
+  legend style={at={(0.5,-0.30)},anchor=north,legend columns=2,draw=none,
+    fill=none,font=\footnotesize}]
+""")
+        fh.write('\n'.join(body) + '\n')
+        fh.write('\\end{groupplot}\n')
+        fh.write('\\node[anchor=south,rotate=90,font=\\small] at '
+                 '([xshift=-1.32cm]group c1r1.west) {test relative error};\n')
+        fh.write('\\end{tikzpicture}\n\\end{document}\n')
+
+    print(f"wrote {out}")
+    for line in notes:
+        print(line[2:])
+
+
+if __name__ == '__main__':
+    main()
